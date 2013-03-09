@@ -55,8 +55,6 @@ export USE_MELD3_EXTENSION_MODULES=True
 
 %{__rm} $RPM_BUILD_ROOT%{py_sitedir}/meld3/test_*
 
-sed -i s'/^#!.*//' $(find $RPM_BUILD_ROOT/%{py_sitedir}/meld3/ -type f)
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
