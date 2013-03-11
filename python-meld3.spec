@@ -5,17 +5,16 @@
 %define 	module	meld3
 Summary:	HTML/XML templating system for Python
 Name:		python-%{module}
-Version:	0.6.7
+Version:	0.6.10
 Release:	1
 License:	ZPL v2.1
 Group:		Development/Languages
 URL:		http://www.plope.com/software/meld3/
 Source0:	http://pypi.python.org/packages/source/m/meld3/meld3-%{version}.tar.gz
-# Source0-md5:	53e589482029ee84ffac9362db71eabe
+# Source0-md5:	42e58624e9d427be7659d7a28e2b0b6f
 # The current meld3 tarball leaves this out by mistake
 # https://github.com/Supervisor/meld3/raw/0.6.7/meld3/cmeld3.c -- AKA:
 # https://github.com/Supervisor/meld3/raw/bafd959fc2e389f46786a6b3174d50f9963fe967/meld3/cmeld3.c
-Patch0:		%{name}-0.6.7-missing-src-file.patch
 BuildRequires:	python-devel
 BuildRequires:	python-elementtree
 BuildRequires:	rpm-pythonprov
@@ -31,7 +30,6 @@ this pattern.
 
 %prep
 %setup -q -n meld3-%{version}
-%patch0 -p1
 
 %build
 export USE_MELD3_EXTENSION_MODULES=True
