@@ -33,9 +33,7 @@ this pattern.
 
 %build
 export USE_MELD3_EXTENSION_MODULES=True
-CC="%{__cc}" \
-CFLAGS="%{rpmcflags}" \
-%{__python} setup.py build
+%py_build
 
 %if %{with tests}
 %{__python} meld3/test_meld3.py
@@ -44,10 +42,7 @@ CFLAGS="%{rpmcflags}" \
 %install
 rm -rf $RPM_BUILD_ROOT
 export USE_MELD3_EXTENSION_MODULES=True
-%{__python} setup.py install \
-	--skip-build \
-	--optimize=2 \
-	--root=$RPM_BUILD_ROOT
+%py_install
 
 %py_postclean
 
