@@ -6,7 +6,7 @@
 Summary:	HTML/XML templating system for Python
 Name:		python-%{module}
 Version:	0.6.10
-Release:	2
+Release:	3
 License:	ZPL v2.1
 Group:		Development/Languages
 URL:		http://www.plope.com/software/meld3/
