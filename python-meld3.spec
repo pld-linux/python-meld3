@@ -18,7 +18,7 @@ Source0:	http://pypi.python.org/packages/source/m/meld3/meld3-%{version}.tar.gz
 BuildRequires:	python-devel
 BuildRequires:	python-elementtree
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 Requires:	python-elementtree
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
